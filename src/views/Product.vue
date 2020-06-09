@@ -13,6 +13,12 @@ export default {
     return {
       product: this.$store.getters.product(this.$route.params.id)
     }
+  },
+  mounted () {this.testifthisworks()},
+  methods: {
+    testifthisworks() {
+      console.log(this.$store.getters.product(this.$route.params.id), "ehehehhh")
+    }
   }
 };
 </script>

@@ -4,9 +4,11 @@
       <h2>Featured Items</h2>
       <ul class="featured-items">
         <li v-for="product in products" :key="product.id" class="featured-items__item">
+          <router-link :to="{ name: 'product', params: {id: product.id}}">
           <img class="product-image" :src="imagePath(product)" alt="">
           <p class="product-title">{{ product.name }}</p>
-          <p><em>${{ product.price }}</em></p>
+          <p><em>{{ product.price }}</em></p>
+          </router-link>
         </li>
       </ul>
     </section>
@@ -24,7 +26,7 @@ export default {
   methods: {
     imagePath(product) {
       return require(`../assets/img/products/${product.images[0]}`);
-    }
+    },
   }
 };
 </script>
