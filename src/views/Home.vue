@@ -7,7 +7,7 @@
           <router-link :to="{ name: 'product', params: {id: product.id}}">
           <img class="product-image" :src="imagePath(product)" alt="">
           <p class="product-title">{{ product.name }}</p>
-          <p><em>{{ product.price }}</em></p>
+          <p><em>{{ product.price }},-</em></p>
           </router-link>
         </li>
       </ul>
